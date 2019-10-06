@@ -8,14 +8,14 @@
 
 import Foundation
 
-class Flow {
+class Flow<R: Router> {
     let questions: [Question]
     let correctAnswers: [Question: Bool]
-    let router: Router
+    let router: R
     
     var answers = [Question: Bool]()
     
-    init(questions: [Question], correctAnswers: [Question: Bool], router: Router) {
+    init(questions: [Question], correctAnswers: [Question: Bool], router: R) {
         self.questions = questions
         self.correctAnswers = correctAnswers
         self.router = router

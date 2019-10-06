@@ -123,5 +123,36 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="117.85714285714285"/>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="KGH-T5-sdR">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="EyX-Ii-6oK" customClass="ResultViewController" customModule="TranlsationQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cqG-wB-hnG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You scored" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY0-y1-nWd">
+                                <rect key="frame" x="20" y="44" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DY0-y1-nWd" firstAttribute="top" secondItem="3je-RL-R1z" secondAttribute="top" id="1LP-f0-phs"/>
+                            <constraint firstItem="3je-RL-R1z" firstAttribute="trailing" secondItem="DY0-y1-nWd" secondAttribute="trailing" constant="20" id="Qmr-FT-fPB"/>
+                            <constraint firstItem="DY0-y1-nWd" firstAttribute="leading" secondItem="3je-RL-R1z" secondAttribute="leading" constant="20" id="TxS-Cy-3xC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3je-RL-R1z"/>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="DY0-y1-nWd" id="LNn-zj-ptP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tqr-eJ-nOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2608.6956521739135" y="118.52678571428571"/>
+        </scene>
     </scenes>
 </document>

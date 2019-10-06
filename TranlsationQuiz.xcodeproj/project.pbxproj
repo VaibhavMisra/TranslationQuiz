@@ -21,6 +21,7 @@
 		EE4A13E7234A51DB00AD1177 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A13E6234A51DB00AD1177 /* Storyboarded.swift */; };
 		EE4A13EA234A527700AD1177 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A13E9234A527700AD1177 /* QuestionViewController.swift */; };
 		EE4A13EC234A528600AD1177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4A13EB234A528600AD1177 /* Main.storyboard */; };
+		EE4A13EE234A5F6800AD1177 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A13ED234A5F6800AD1177 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		EE4A13E6234A51DB00AD1177 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		EE4A13E9234A527700AD1177 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		EE4A13EB234A528600AD1177 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EE4A13ED234A5F6800AD1177 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				EE4A13E9234A527700AD1177 /* QuestionViewController.swift */,
+				EE4A13ED234A5F6800AD1177 /* ResultViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				EE4A13DE234A4C3400AD1177 /* GameResult.swift in Sources */,
 				EE4A139E234A39AD00AD1177 /* Question.swift in Sources */,
 				EE4A13E7234A51DB00AD1177 /* Storyboarded.swift in Sources */,
+				EE4A13EE234A5F6800AD1177 /* ResultViewController.swift in Sources */,
 				EE1E2601234A33E500C63C59 /* AppDelegate.swift in Sources */,
 				EE4A13E4234A512E00AD1177 /* GameRouter.swift in Sources */,
 				EE1E2603234A33E500C63C59 /* SceneDelegate.swift in Sources */,

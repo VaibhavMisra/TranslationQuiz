@@ -24,6 +24,8 @@ class GameRouter: Router {
     }
     
     func routeTo(result: GameResult<Question, Answer>) {
-        
+        let vc = ResultViewController.instantiate()
+        vc.result = result
+        navController.pushViewController(vc, animated: true)
     }
 }

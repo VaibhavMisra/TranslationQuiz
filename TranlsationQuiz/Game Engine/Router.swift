@@ -13,5 +13,5 @@ protocol Router {
     typealias Answer = Bool
     
     func routeToQuestion(question: Question, callback: @escaping (Answer) -> Void)
-    func routeToResult()
+    func routeTo(result: GameResult<Question, Answer>)
 }

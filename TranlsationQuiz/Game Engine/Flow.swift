@@ -35,11 +35,20 @@ class Flow<R: Router> {
                 self?.answers[question] = answer
                 self?.routeToQuestion(after: index)
             }
+        } else {
+            router.routeTo(result: result())
         }
     }
     
     private func routeToQuestion(after index: Int) {
         routeToQuestion(at: questions.index(after: index))
+    }
+    
+    private func result() -> GameResult<Question, Answer> {
+        let totalScore = answers.reduce(0) { (score, tuple) in
+            return score + (correctAnswers[tuple.key] == tuple.value ? 1 : 0)
+        }
+        return GameResult(answers: answers, score: totalScore)
     }
     
 }

@@ -18,6 +18,7 @@
 		EE1E2632234A340D00C63C59 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E2631234A340D00C63C59 /* Flow.swift */; };
 		EE4A139C234A398F00AD1177 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A139B234A398F00AD1177 /* Router.swift */; };
 		EE4A139E234A39AD00AD1177 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A139D234A39AD00AD1177 /* Question.swift */; };
+		EE4A13DE234A4C3400AD1177 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A13DD234A4C3400AD1177 /* GameResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		EE1E2631234A340D00C63C59 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		EE4A139B234A398F00AD1177 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		EE4A139D234A39AD00AD1177 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		EE4A13DD234A4C3400AD1177 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				EE1E2631234A340D00C63C59 /* Flow.swift */,
 				EE4A139B234A398F00AD1177 /* Router.swift */,
 				EE4A139D234A39AD00AD1177 /* Question.swift */,
+				EE4A13DD234A4C3400AD1177 /* GameResult.swift */,
 			);
 			path = "Game Engine";
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				EE1E2605234A33E500C63C59 /* ViewController.swift in Sources */,
 				EE1E2632234A340D00C63C59 /* Flow.swift in Sources */,
 				EE4A139C234A398F00AD1177 /* Router.swift in Sources */,
+				EE4A13DE234A4C3400AD1177 /* GameResult.swift in Sources */,
 				EE4A139E234A39AD00AD1177 /* Question.swift in Sources */,
 				EE1E2601234A33E500C63C59 /* AppDelegate.swift in Sources */,
 				EE1E2603234A33E500C63C59 /* SceneDelegate.swift in Sources */,

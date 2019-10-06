@@ -31,10 +31,7 @@ class Flow<R: Router> {
     private func routeToQuestion(at index: Int) {
         if index < questions.endIndex {
             let question = questions[index]
-            router.routeToQuestion(question: question) { [weak self] answer in
-                self?.answers[question] = answer
-                self?.routeToQuestion(after: index)
-            }
+            router.routeToQuestion(question: question, callback: callback(for: question, at: index))
         } else {
             router.routeTo(result: result())
         }
@@ -42,6 +39,13 @@ class Flow<R: Router> {
     
     private func routeToQuestion(after index: Int) {
         routeToQuestion(at: questions.index(after: index))
+    }
+    
+    private func callback(for question: Question, at index: Int) -> (Answer) -> Void {
+        return { [weak self] answer in
+            self?.answers[question] = answer
+            self?.routeToQuestion(after: index)
+        }
     }
     
     private func result() -> GameResult<Question, Answer> {

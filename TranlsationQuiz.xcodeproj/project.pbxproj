@@ -16,6 +16,8 @@
 		EE1E2618234A33E700C63C59 /* TranlsationQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E2617234A33E700C63C59 /* TranlsationQuizTests.swift */; };
 		EE1E2623234A33E700C63C59 /* TranlsationQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E2622234A33E700C63C59 /* TranlsationQuizUITests.swift */; };
 		EE1E2632234A340D00C63C59 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E2631234A340D00C63C59 /* Flow.swift */; };
+		EE4A139C234A398F00AD1177 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A139B234A398F00AD1177 /* Router.swift */; };
+		EE4A139E234A39AD00AD1177 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A139D234A39AD00AD1177 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		EE1E2622234A33E700C63C59 /* TranlsationQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranlsationQuizUITests.swift; sourceTree = "<group>"; };
 		EE1E2624234A33E700C63C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE1E2631234A340D00C63C59 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		EE4A139B234A398F00AD1177 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EE4A139D234A39AD00AD1177 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				EE1E2631234A340D00C63C59 /* Flow.swift */,
+				EE4A139B234A398F00AD1177 /* Router.swift */,
+				EE4A139D234A39AD00AD1177 /* Question.swift */,
 			);
 			path = "Game Engine";
 			sourceTree = "<group>";
@@ -272,6 +278,8 @@
 			files = (
 				EE1E2605234A33E500C63C59 /* ViewController.swift in Sources */,
 				EE1E2632234A340D00C63C59 /* Flow.swift in Sources */,
+				EE4A139C234A398F00AD1177 /* Router.swift in Sources */,
+				EE4A139E234A39AD00AD1177 /* Question.swift in Sources */,
 				EE1E2601234A33E500C63C59 /* AppDelegate.swift in Sources */,
 				EE1E2603234A33E500C63C59 /* SceneDelegate.swift in Sources */,
 			);

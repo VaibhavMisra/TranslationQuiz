@@ -8,16 +8,6 @@
 
 import Foundation
 
-struct Question: Hashable {
-    let word: String
-    let translation: String
-}
-
-protocol Router {
-    func routeToQuestion(question: Question, callback: @escaping (Bool) -> Void)
-    func routeToResult()
-}
-
 class Flow {
     let questions: [Question]
     let correctAnswers: [Question: Bool]

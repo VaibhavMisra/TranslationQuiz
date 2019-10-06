@@ -9,13 +9,16 @@
 import Foundation
 
 class Flow<R: Router> {
+    
+    typealias Answer = R.Answer
+    
     let questions: [Question]
-    let correctAnswers: [Question: Bool]
+    let correctAnswers: [Question: Answer]
     let router: R
     
-    var answers = [Question: Bool]()
+    var answers = [Question: Answer]()
     
-    init(questions: [Question], correctAnswers: [Question: Bool], router: R) {
+    init(questions: [Question], correctAnswers: [Question: Answer], router: R) {
         self.questions = questions
         self.correctAnswers = correctAnswers
         self.router = router

@@ -9,6 +9,9 @@
 import Foundation
 
 protocol Router {
-    func routeToQuestion(question: Question, callback: @escaping (Bool) -> Void)
+    
+    typealias Answer = Bool
+    
+    func routeToQuestion(question: Question, callback: @escaping (Answer) -> Void)
     func routeToResult()
 }

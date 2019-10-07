@@ -20,20 +20,29 @@ class QuestionViewController : UIViewController, Storyboarded {
     
     var timer: Timer?
     var timeRemaining = 5
+    var animator: UIViewPropertyAnimator?
+    var getTopChange: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        
         timer = Timer.scheduledTimer(withTimeInterval: 1,
                                      repeats: true,
                                      block: { [weak self] timer in
             self?.timerAction()
         })
+        
+        animator = UIViewPropertyAnimator(duration: 5.0, curve: .linear) {
+            self.translationTopConstraint.constant += self.getTopChange
+            self.view.layoutIfNeeded()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         timer?.fire()
+        animator?.startAnimation()
     }
     
     //MARK: - IBAction methods
@@ -50,7 +59,7 @@ class QuestionViewController : UIViewController, Storyboarded {
     //MARK: - Private Helper
     private func configureView() {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
+        getTopChange = self.timerLabel.frame.minY - (self.translationLabel.frame.minY + self.translationLabel.frame.height)
         if let question = self.question {
             wordLabel.text = question.word
             translationLabel.text = question.translation
@@ -59,12 +68,12 @@ class QuestionViewController : UIViewController, Storyboarded {
     }
     
     private func timerAction() {
-        timeRemaining -= 1
         if self.timeRemaining < 0 {
             timer?.invalidate()
             selection?(.noAnswer)
         } else {
             timerLabel.text = "0:0\(timeRemaining)"
         }
+        timeRemaining -= 1
     }
 }

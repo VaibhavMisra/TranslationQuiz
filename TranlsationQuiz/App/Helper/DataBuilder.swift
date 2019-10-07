@@ -9,17 +9,44 @@
 import Foundation
 
 class DataBuilder {
-    static let question1 = Question(word: "Hello", translation: "Hola")
-    static let question2 = Question(word: "Dog", translation: "Cat")
     
-    class func getQuestions() -> [Question] {
-        
-        let questions = [question1, question2]
-        return questions
+    var fileName: String
+    var masterSet = [Question]()
+    var questions = [Question]()
+    var correctAnswers = [Question: Answer]()
+    
+    init(fileName: String) {
+        self.fileName = fileName
+        do {
+            if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            let jsonData = try Data(contentsOf: url)
+            masterSet = try JSONDecoder().decode([Question].self, from: jsonData)
+        }
+        } catch {
+            assertionFailure("Couldn't load master set")
+            print(error.localizedDescription)
+        }
+        initData()
     }
     
-    class func getCorrectAnswers() -> [Question: Answer] {
-        let correctAnswers = [question1: Answer.correct, question2:Answer.incorrect]
-        return correctAnswers
+    private func initData() {
+        for _ in 1...5 {
+            if let question = masterSet.randomElement(),
+                let isCorrect = [true, false, true, false, true].randomElement() {
+                switch isCorrect {
+                case true:
+                    questions.append(question)
+                    correctAnswers[question] = .correct
+                case false:
+                    var incorrectTranslation = "hola"
+                    if let randomQuestion = masterSet.randomElement() {
+                        incorrectTranslation = randomQuestion.translation
+                    }
+                    let incorrectQuestion = Question(word: question.word, translation: incorrectTranslation)
+                    questions.append(incorrectQuestion)
+                    correctAnswers[incorrectQuestion] = .incorrect
+                }
+            }
+        }
     }
 }

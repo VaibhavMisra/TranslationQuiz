@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct Question: Hashable {
+struct Question: Hashable, Decodable {
     let word: String
     let translation: String
+    
+    private enum CodingKeys : String, CodingKey {
+        case word = "text_eng", translation = "text_spa"
+    }
 }

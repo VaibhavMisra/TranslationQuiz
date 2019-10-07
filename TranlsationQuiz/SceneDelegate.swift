@@ -23,8 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navController = UINavigationController()
         let gameRouter = GameRouter(navController: navController)
 
-        let questions = DataBuilder.getQuestions()
-        let correctAnswers = DataBuilder.getCorrectAnswers()
+        let data = DataBuilder(fileName: "words")
+        let questions = data.questions
+        let correctAnswers = data.correctAnswers
         gameFlow = Flow(questions: questions,
                         correctAnswers:correctAnswers, router: gameRouter)
         gameFlow?.start()

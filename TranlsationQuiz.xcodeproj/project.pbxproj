@@ -25,6 +25,7 @@
 		EE4A13F2234A66D900AD1177 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A13F1234A66D900AD1177 /* ResultTableViewCell.swift */; };
 		EE4A13F4234AFE8F00AD1177 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A13F3234AFE8F00AD1177 /* Answer.swift */; };
 		EE4A13F6234B10F800AD1177 /* DataBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A13F5234B10F800AD1177 /* DataBuilder.swift */; };
+		EE4A13F8234B124000AD1177 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = EE4A13F7234B124000AD1177 /* words.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		EE4A13F1234A66D900AD1177 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		EE4A13F3234AFE8F00AD1177 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		EE4A13F5234B10F800AD1177 /* DataBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBuilder.swift; sourceTree = "<group>"; };
+		EE4A13F7234B124000AD1177 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				EE1E2602234A33E500C63C59 /* SceneDelegate.swift */,
 				EE4A13EB234A528600AD1177 /* Main.storyboard */,
 				EE1E2609234A33E700C63C59 /* Assets.xcassets */,
+				EE4A13F9234B126B00AD1177 /* Resources */,
 				EE1E260B234A33E700C63C59 /* LaunchScreen.storyboard */,
 				EE1E260E234A33E700C63C59 /* Info.plist */,
 			);
@@ -196,6 +199,14 @@
 				EE4A13F1234A66D900AD1177 /* ResultTableViewCell.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EE4A13F9234B126B00AD1177 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A13F7234B124000AD1177 /* words.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE4A13EC234A528600AD1177 /* Main.storyboard in Resources */,
+				EE4A13F8234B124000AD1177 /* words.json in Resources */,
 				EE1E260D234A33E700C63C59 /* LaunchScreen.storyboard in Resources */,
 				EE1E260A234A33E700C63C59 /* Assets.xcassets in Resources */,
 			);

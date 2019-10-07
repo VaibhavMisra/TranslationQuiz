@@ -11,7 +11,7 @@ import UIKit
 class QuestionViewController : UIViewController, Storyboarded {
     
     public var question: Question?
-    public var selection: ((Bool) -> Void)?
+    public var selection: ((Answer) -> Void)?
     
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var translationLabel: UILabel!
@@ -19,6 +19,7 @@ class QuestionViewController : UIViewController, Storyboarded {
     @IBOutlet weak var translationTopConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         if let question = self.question {
             wordLabel.text = question.word
             translationLabel.text = question.translation
@@ -26,10 +27,10 @@ class QuestionViewController : UIViewController, Storyboarded {
     }
     
     @IBAction func incorrectBtnTapped(_ sender: UIButton) {
-        selection?(false)
+        selection?(.incorrect)
     }
     
     @IBAction func correctBtnTapped(_ sender: UIButton) {
-        selection?(true)
+        selection?(.correct)
     }
 }

@@ -9,6 +9,8 @@
 import Foundation
 
 public struct GameResult<Question: Hashable, Answer> {
+    public let questions: [Question]
     public let answers: [Question: Answer]
+    public let correctAnswers: [Question: Answer]
     public let score: Int
 }

@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navController = UINavigationController()
         let gameRouter = GameRouter(navController: navController)
 
-        gameFlow = Flow(questions: [question1, question2], correctAnswers: [question1: true, question2: false], router: gameRouter)
+        gameFlow = Flow(questions: [question1, question2], correctAnswers: [question1: Answer.correct, question2:Answer.incorrect], router: gameRouter)
         gameFlow?.start()
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)

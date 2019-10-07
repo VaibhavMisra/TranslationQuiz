@@ -10,8 +10,6 @@ import Foundation
 
 class Flow<R: Router> {
     
-    typealias Answer = R.Answer
-    
     let questions: [Question]
     let correctAnswers: [Question: Answer]
     let router: R
@@ -31,7 +29,8 @@ class Flow<R: Router> {
     private func routeToQuestion(at index: Int) {
         if index < questions.endIndex {
             let question = questions[index]
-            router.routeToQuestion(question: question, callback: callback(for: question, at: index))
+            router.routeToQuestion(question: question,
+                                   callback: callback(for: question, at: index))
         } else {
             router.routeTo(result: result())
         }
@@ -41,7 +40,8 @@ class Flow<R: Router> {
         routeToQuestion(at: questions.index(after: index))
     }
     
-    private func callback(for question: Question, at index: Int) -> (Answer) -> Void {
+    private func callback(for question: Question,
+                          at index: Int) -> (Answer) -> Void {
         return { [weak self] answer in
             self?.answers[question] = answer
             self?.routeToQuestion(after: index)
@@ -52,7 +52,8 @@ class Flow<R: Router> {
         let totalScore = answers.reduce(0) { (score, tuple) in
             return score + (correctAnswers[tuple.key] == tuple.value ? 1 : 0)
         }
-        return GameResult(answers: answers, score: totalScore)
+        return GameResult(questions:questions, answers: answers, correctAnswers: correctAnswers,
+                          score: totalScore)
     }
     
 }

@@ -20,13 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let question1 = Question(word: "Hello", translation: "Hola")
-        let question2 = Question(word: "Dog", translation: "Cat")
-        
         let navController = UINavigationController()
         let gameRouter = GameRouter(navController: navController)
 
-        gameFlow = Flow(questions: [question1, question2], correctAnswers: [question1: Answer.correct, question2:Answer.incorrect], router: gameRouter)
+        let questions = DataBuilder.getQuestions()
+        let correctAnswers = DataBuilder.getCorrectAnswers()
+        gameFlow = Flow(questions: questions,
+                        correctAnswers:correctAnswers, router: gameRouter)
         gameFlow?.start()
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)

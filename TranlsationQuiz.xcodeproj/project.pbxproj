@@ -24,6 +24,7 @@
 		EE4A13EE234A5F6800AD1177 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A13ED234A5F6800AD1177 /* ResultViewController.swift */; };
 		EE4A13F2234A66D900AD1177 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A13F1234A66D900AD1177 /* ResultTableViewCell.swift */; };
 		EE4A13F4234AFE8F00AD1177 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A13F3234AFE8F00AD1177 /* Answer.swift */; };
+		EE4A13F6234B10F800AD1177 /* DataBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A13F5234B10F800AD1177 /* DataBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		EE4A13ED234A5F6800AD1177 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		EE4A13F1234A66D900AD1177 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		EE4A13F3234AFE8F00AD1177 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		EE4A13F5234B10F800AD1177 /* DataBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				EE4A13E6234A51DB00AD1177 /* Storyboarded.swift */,
+				EE4A13F5234B10F800AD1177 /* DataBuilder.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				EE4A13DE234A4C3400AD1177 /* GameResult.swift in Sources */,
 				EE4A139E234A39AD00AD1177 /* Question.swift in Sources */,
 				EE4A13E7234A51DB00AD1177 /* Storyboarded.swift in Sources */,
+				EE4A13F6234B10F800AD1177 /* DataBuilder.swift in Sources */,
 				EE4A13EE234A5F6800AD1177 /* ResultViewController.swift in Sources */,
 				EE1E2601234A33E500C63C59 /* AppDelegate.swift in Sources */,
 				EE4A13E4234A512E00AD1177 /* GameRouter.swift in Sources */,

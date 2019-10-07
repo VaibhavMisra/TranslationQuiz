@@ -11,7 +11,6 @@
 		EE1E2603234A33E500C63C59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E2602234A33E500C63C59 /* SceneDelegate.swift */; };
 		EE1E260A234A33E700C63C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1E2609234A33E700C63C59 /* Assets.xcassets */; };
 		EE1E260D234A33E700C63C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1E260B234A33E700C63C59 /* LaunchScreen.storyboard */; };
-		EE1E2618234A33E700C63C59 /* TranlsationQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E2617234A33E700C63C59 /* TranlsationQuizTests.swift */; };
 		EE1E2623234A33E700C63C59 /* TranlsationQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E2622234A33E700C63C59 /* TranlsationQuizUITests.swift */; };
 		EE1E2632234A340D00C63C59 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E2631234A340D00C63C59 /* Flow.swift */; };
 		EE4A139C234A398F00AD1177 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A139B234A398F00AD1177 /* Router.swift */; };
@@ -26,6 +25,7 @@
 		EE4A13F4234AFE8F00AD1177 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A13F3234AFE8F00AD1177 /* Answer.swift */; };
 		EE4A13F6234B10F800AD1177 /* DataBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A13F5234B10F800AD1177 /* DataBuilder.swift */; };
 		EE4A13F8234B124000AD1177 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = EE4A13F7234B124000AD1177 /* words.json */; };
+		EE9447D9234B3AA000913773 /* FlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9447D8234B3AA000913773 /* FlowTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +53,6 @@
 		EE1E260C234A33E700C63C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE1E260E234A33E700C63C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE1E2613234A33E700C63C59 /* TranlsationQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranlsationQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE1E2617234A33E700C63C59 /* TranlsationQuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranlsationQuizTests.swift; sourceTree = "<group>"; };
 		EE1E2619234A33E700C63C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE1E261E234A33E700C63C59 /* TranlsationQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranlsationQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE1E2622234A33E700C63C59 /* TranlsationQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranlsationQuizUITests.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		EE4A13F3234AFE8F00AD1177 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		EE4A13F5234B10F800AD1177 /* DataBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBuilder.swift; sourceTree = "<group>"; };
 		EE4A13F7234B124000AD1177 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		EE9447D8234B3AA000913773 /* FlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +137,8 @@
 		EE1E2616234A33E700C63C59 /* TranlsationQuizTests */ = {
 			isa = PBXGroup;
 			children = (
-				EE1E2617234A33E700C63C59 /* TranlsationQuizTests.swift */,
 				EE1E2619234A33E700C63C59 /* Info.plist */,
+				EE9447D8234B3AA000913773 /* FlowTest.swift */,
 			);
 			path = TranlsationQuizTests;
 			sourceTree = "<group>";
@@ -280,6 +280,7 @@
 					};
 					EE1E2612234A33E700C63C59 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 						TestTargetID = EE1E25FC234A33E500C63C59;
 					};
 					EE1E261D234A33E700C63C59 = {
@@ -361,7 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE1E2618234A33E700C63C59 /* TranlsationQuizTests.swift in Sources */,
+				EE9447D9234B3AA000913773 /* FlowTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +556,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7UG78TM9AU;
 				INFOPLIST_FILE = TranlsationQuizTests/Info.plist;
@@ -566,6 +568,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.VaibhavMisra.TranlsationQuizTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TranlsationQuiz.app/TranlsationQuiz";
@@ -577,6 +580,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7UG78TM9AU;
 				INFOPLIST_FILE = TranlsationQuizTests/Info.plist;

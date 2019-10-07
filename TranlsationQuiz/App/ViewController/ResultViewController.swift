@@ -38,7 +38,8 @@ class ResultViewController: UIViewController, Storyboarded, UITableViewDataSourc
             let correctAnswer = result?.correctAnswers[question] {
             cell.wordLabel.text = question.word
             cell.translationLabel.text = question.translation
-            cell.answerLabel.text = getAnswerText(for: answer)
+            cell.answerLabel.text = getAnswerText(for: answer,
+                                                  correctAnswer: correctAnswer)
             cell.answerLabel.textColor  = (correctAnswer == answer) ?
                 UIColor.systemGreen : UIColor.systemRed
         }
@@ -46,11 +47,19 @@ class ResultViewController: UIViewController, Storyboarded, UITableViewDataSourc
     }
     
     //MARK: - Private Helper
-    public func getAnswerText(for answer: Answer) -> String {
+    public func getAnswerText(for answer: Answer, correctAnswer: Answer) -> String {
+        var text = ""
         switch answer {
-        case .correct: return "Correct"
-        case .incorrect: return "Incorrect"
-        case .noAnswer: return "Didn't Answer"
+        case .correct: text = "Correct"
+        case .incorrect: text = "Incorrect"
+        case .noAnswer: text = "Didn't Answer"
         }
+        
+        if answer == correctAnswer {
+            text += " (You get +1 point)"
+        } else {
+            text += " (Wrong Answer!)"
+        }
+        return text
     }
 }

@@ -40,8 +40,7 @@ class ResultViewController: UIViewController, Storyboarded, UITableViewDataSourc
             cell.translationLabel.text = question.translation
             cell.answerLabel.text = getAnswerText(for: answer,
                                                   correctAnswer: correctAnswer)
-            cell.answerLabel.textColor  = (correctAnswer == answer) ?
-                UIColor.systemGreen : UIColor.systemRed
+            cell.setAnswerlabelTextColor(isCorrect: answer == correctAnswer)
         }
         return cell
     }

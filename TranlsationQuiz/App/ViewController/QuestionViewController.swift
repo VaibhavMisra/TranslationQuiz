@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionViewController : UIViewController, Storyboarded {
+class QuestionViewController: UIViewController, Storyboarded {
     
     public var question: Question?
     public var selection: ((Answer) -> Void)?
@@ -29,7 +29,7 @@ class QuestionViewController : UIViewController, Storyboarded {
         
         timer = Timer.scheduledTimer(withTimeInterval: 1,
                                      repeats: true,
-                                     block: { [weak self] timer in
+                                     block: { [weak self] _ in
             self?.timerAction()
         })
         
@@ -45,7 +45,7 @@ class QuestionViewController : UIViewController, Storyboarded {
         animator?.startAnimation()
     }
     
-    //MARK: - IBAction methods
+    // MARK: - IBAction methods
     @IBAction func incorrectBtnTapped(_ sender: UIButton) {
         timer?.invalidate()
         selection?(.incorrect)
@@ -56,10 +56,11 @@ class QuestionViewController : UIViewController, Storyboarded {
         selection?(.correct)
     }
     
-    //MARK: - Private Helper
+    // MARK: - Private Helper
     private func configureView() {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        getTopChange = self.timerLabel.frame.minY - (self.translationLabel.frame.minY + self.translationLabel.frame.height)
+        getTopChange = self.timerLabel.frame.minY -
+            (self.translationLabel.frame.minY + self.translationLabel.frame.height)
         if let question = self.question {
             wordLabel.text = question.word
             translationLabel.text = question.translation

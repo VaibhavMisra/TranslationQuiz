@@ -17,15 +17,15 @@ class GameRouter: Router {
     }
     
     func routeToQuestion(question: Question, callback: @escaping (Answer) -> Void) {
-        let vc = QuestionViewController.instantiate()
-        vc.question = question
-        vc.selection = callback
-        navController.pushViewController(vc, animated: true)
+        let questionVC = QuestionViewController.instantiate()
+        questionVC.question = question
+        questionVC.selection = callback
+        navController.pushViewController(questionVC, animated: true)
     }
     
     func routeTo(result: GameResult<Question, Answer>) {
-        let vc = ResultViewController.instantiate()
-        vc.result = result
-        navController.pushViewController(vc, animated: true)
+        let resultVC = ResultViewController.instantiate()
+        resultVC.result = result
+        navController.pushViewController(resultVC, animated: true)
     }
 }

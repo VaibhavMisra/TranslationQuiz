@@ -9,11 +9,11 @@
 import UIKit
 
 class ResultTableViewCell: UITableViewCell {
-    
+
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var translationLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
-    
+
     func setAnswerlabelTextColor(isCorrect: Bool) {
         answerLabel.textColor = isCorrect ?
             UIColor.systemGreen : UIColor.systemRed

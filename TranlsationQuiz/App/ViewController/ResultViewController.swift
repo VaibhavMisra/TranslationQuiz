@@ -24,7 +24,7 @@ class ResultViewController: UIViewController, Storyboarded, UITableViewDataSourc
         
     }
     
-    //MARK: - TableView Data Source
+    // MARK: - TableView Data Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let count = result?.questions.count else { return 0 }
         return count
@@ -45,7 +45,7 @@ class ResultViewController: UIViewController, Storyboarded, UITableViewDataSourc
         return cell
     }
     
-    //MARK: - Private Helper
+    // MARK: - Private Helper
     public func getAnswerText(for answer: Answer, correctAnswer: Answer) -> String {
         var text = ""
         switch answer {

@@ -52,8 +52,8 @@ class Flow<R: Router> {
         let totalScore = answers.reduce(0) { (score, tuple) in
             return score + (correctAnswers[tuple.key] == tuple.value ? 1 : 0)
         }
-        return GameResult(questions:questions, answers: answers, correctAnswers: correctAnswers,
-                          score: totalScore)
+        return GameResult(questions: questions, answers: answers,
+                          correctAnswers: correctAnswers, score: totalScore)
     }
     
 }

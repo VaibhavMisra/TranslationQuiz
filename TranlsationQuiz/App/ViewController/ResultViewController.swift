@@ -9,30 +9,30 @@
 import UIKit
 
 class ResultViewController: UIViewController, Storyboarded, UITableViewDataSource {
-    
+
     public var result: GameResult<Question, Answer>?
-    
+
     @IBOutlet weak var scoreLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
+
         if let gameResult = self.result {
             scoreLabel.text = "You got \(gameResult.score)/\(gameResult.answers.count) correct"
         }
-        
+
     }
-    
+
     // MARK: - TableView Data Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let count = result?.questions.count else { return 0 }
         return count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell") as! ResultTableViewCell
-        
+
         if let question = result?.questions[indexPath.row],
             let answer = result?.answers[question],
             let correctAnswer = result?.correctAnswers[question] {
@@ -44,7 +44,7 @@ class ResultViewController: UIViewController, Storyboarded, UITableViewDataSourc
         }
         return cell
     }
-    
+
     // MARK: - Private Helper
     public func getAnswerText(for answer: Answer, correctAnswer: Answer) -> String {
         var text = ""
@@ -53,7 +53,7 @@ class ResultViewController: UIViewController, Storyboarded, UITableViewDataSourc
         case .incorrect: text = "Incorrect"
         case .noAnswer: text = "Didn't Answer"
         }
-        
+
         if answer == correctAnswer {
             text += " (You get +1 point)"
         } else {

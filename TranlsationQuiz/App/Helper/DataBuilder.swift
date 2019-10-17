@@ -9,12 +9,12 @@
 import Foundation
 
 class DataBuilder {
-    
+
     var fileName: String
     var masterSet = [Question]()
     var questions = [Question]()
     var correctAnswers = [Question: Answer]()
-    
+
     init(fileName: String) {
         self.fileName = fileName
         do {
@@ -28,7 +28,7 @@ class DataBuilder {
         }
         initData()
     }
-    
+
     private func initData() {
         for _ in 1...5 {
             if let question = masterSet.randomElement(),

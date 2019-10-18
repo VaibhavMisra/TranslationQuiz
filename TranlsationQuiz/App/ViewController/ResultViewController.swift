@@ -31,6 +31,7 @@ class ResultViewController: UIViewController, Storyboarded, UITableViewDataSourc
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // swiftlint:disable:next force_cast
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell") as! ResultTableViewCell
 
         if let question = result?.questions[indexPath.row],
